@@ -1,0 +1,220 @@
+student@MIT-ICT-LAB5-12:~$ mkdir 210953172
+student@MIT-ICT-LAB5-12:~$ cd 210953172
+student@MIT-ICT-LAB5-12:~/210953172$ mkdir Lab1
+student@MIT-ICT-LAB5-12:~/210953172$ cd Lab1
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ touch a b c d e
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ touch test.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ pwd
+/home/student/210953172/Lab1
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ cd ~
+student@MIT-ICT-LAB5-12:~$ ls -l
+total 76
+drwxrwxr-x  4 student student 4096 Feb 21 10:32 210911044
+drwxrwxr-x  8 student student 4096 Apr  6 08:58 210911242
+drwxrwxr-x  3 student student 4096 Mar 29 16:07 210953076
+drwxrwxr-x  3 student student 4096 Jun  5 11:29 210953172
+drwxrwxr-x 11 student student 4096 Apr 21 14:23 210953258
+drwxrwxr-x  4 student student 4096 Feb  6 14:04 210953320
+drwxr-xr-x  5 student student 4096 Feb 20 15:16 210953340
+-rw-rw-r--  1 student student    0 Feb 27 16:45 abc.txt
+drwx------  3 student student 4096 Mar 28 08:51 Desktop
+drwx------  2 student student 4096 Oct 27  2022 Documents
+drwx------  3 student student 4096 Apr  6 08:56 Downloads
+-rw-rw-r--  1 student student    0 Feb 24 14:31 f1
+-rwxrwxr-x  1 student student   59 Feb 27 16:45 f1.sh
+drwx------  2 student student 4096 Oct 27  2022 Music
+drwxrwxr-x  2 student student 4096 Jan 30 14:46 newD
+drwx------  2 student student 4096 Mar 29 16:00 Pictures
+drwx------  2 student student 4096 Oct 27  2022 Public
+-rw-rw-r--  1 student student    0 Mar  1 16:26 sh.sh.sh
+drwx------  4 student student 4096 Feb 16 08:43 snap
+drwxrwxr-x  2 student student 4096 Feb  8 14:39 temp1
+drwx------  2 student student 4096 Oct 27  2022 Templates
+drwx------  2 student student 4096 Oct 27  2022 Videos
+student@MIT-ICT-LAB5-12:~$ cd .|210953172
+210953172: command not found
+student@MIT-ICT-LAB5-12:~$ cd ./210953172
+student@MIT-ICT-LAB5-12:~/210953172$ cd ./Lab1
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls -a >> test.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ cat test.txt
+.
+..
+a
+b
+c
+d
+e
+test.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls g*
+ls: cannot access 'g*': No such file or directory
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls t*
+test.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls *[a-z]*
+a  b  c  d  e  test.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls *.txt
+test.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ touch t1 t2.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls *[0-9]*
+t1  t2.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ file /bin/ls
+/bin/ls: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=2f15ad836be3339dec0e2e6a3c637e08e48aacbd, for GNU/Linux 3.2.0, stripped
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ 
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ head /etc/services
+# Network services, Internet style
+#
+# Note that it is presently the policy of IANA to assign a single well-known
+# port number for both TCP and UDP; hence, officially ports have two entries
+# even if the protocol doesn't support UDP operations.
+#
+# Updated from https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml .
+#
+# New ports will be added on request if they have been officially assigned
+# by IANA and used in the real-world or are needed by a debian package.
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ tail /etc/services ~f
+==> /etc/services <==
+vboxd		20012/udp
+binkp		24554/tcp			# binkp fidonet protocol
+asp		27374/tcp			# Address Search Protocol
+asp		27374/udp
+csync2		30865/tcp			# cluster synchronization tool
+dircproxy	57000/tcp			# Detachable IRC Proxy
+tfido		60177/tcp			# fidonet EMSI over telnet
+fido		60179/tcp			# fidonet EMSI over TCP
+
+# Local services
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ mkdir temp
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ cp test.txt temp
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls temp
+test.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ cd temp
+student@MIT-ICT-LAB5-12:~/210953172/Lab1/temp$ mv test.txt rename.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1/temp$ cd ..
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls temp
+rename.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ rm temp/rename.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls temp
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ #{Empty Directory}
+tudent@MIT-ICT-LAB5-12:~/210953172/Lab1$ rmdir temp
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls -a
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ find -name*.sh
+./gnome_terminal/install.sh
+
+================================================================================================
+LAB 1 Q2 
+Explore the following commands along with their various options. 
+
+(cat)
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ cat > helloWorld.txt
+Hello World !!!
+^Z
+[1]+  Stopped                 cat > helloWorld.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ cat helloWorld.txt
+Hello World !!!
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ cat >> helloWorld.txt
+Appending...
+^Z
+[1]+  Stopped                 cat >> helloWorld.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ cat helloWorld.txt
+Hello World !!!
+Appending...
+
+
+
+(head and tail)
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ head -n 3 helloWorld.txt
+HelloWorld!!!
+Appending...
+file-1
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ head -c 13 helloWorld.txt
+HelloWorld!!!
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ tail -c 10 helloWorld.txt
+..
+file-1
+
+
+
+(cp)
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ cp -f helloWorld.txt backup.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ cp -n helloWorld.txt copy-text.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ cp -i helloWorld.txt copy-text2.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls
+a  backup.txt  copy-text2.txt  d  helloWorld.txt  Script.txt  t2.txt
+b  c           copy-text.txt   e  rename.txt      t1
+
+
+
+
+(mv)
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ mv helloWorld.txt renamed.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls
+a  backup.txt  copy-text2.txt  d  renamed.txt  Script.txt  t2.txt
+b  c           copy-text.txt   e  rename.txt   t1
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ mv -i renamed.txt backup.txt
+mv: overwrite 'backup.txt'? Y
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ mv -f backup.txt helloWorld.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls
+a  c               copy-text.txt  e               rename.txt  t1
+b  copy-text2.txt  d              helloWorld.txt  Script.txt  t2.txt
+
+
+
+(rm)
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ touch delete1 delete2 delete3
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ rm -i delete*
+rm: remove regular empty file 'delete1'? Y
+rm: remove regular empty file 'delete2'? Y
+rm: remove regular empty file 'delete3'? Y
+
+
+
+(rmdir)
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ mkdir Lab_1_Del
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ rmdir Lab_1_Del
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls
+a  c               copy-text.txt  e   f2              rename.txt  t1
+b  copy-text2.txt  d              f1  helloWorld.txt  Script.txt  t2.txt
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ mkdir Lab_1_Del ; cd Lab_1_Del;
+student@MIT-ICT-LAB5-12:~/210953172/Lab1/Lab_1_Del$ touch f1 f2
+student@MIT-ICT-LAB5-12:~/210953172/Lab1/Lab_1_Del$ cd ..
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ rmdir Lab_1_Del
+
+
+
+(find) 
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ find . -name '*.txt'
+./t2.txt
+./Script.txt
+./copy-text2.txt
+./rename.txt
+./helloWorld.txt
+./copy-text.txt
+
+============================================================================
+
+LAB 1 Q3
+List all the file names satisfying following criteria
+a. has the extension .txt.
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls *.txt
+copy-text2.txt  copy-text.txt  helloWorld.txt  rename.txt  Script.txt  t2.txt
+
+
+b. containing atleast one digit.
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls *[0-9]*
+copy-text2.txt  f1  f2  t1  t2.txt
+
+
+c. having minimum length of 4.
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls *????*
+copy-text2.txt  copy-text.txt  helloWorld.txt  rename.txt  Script.txt  t2.txt
+
+
+
+d. does not contain any of the vowels as the start letter.
+student@MIT-ICT-LAB5-12:~/210953172/Lab1$ ls [!aeiou]*
+b  copy-text2.txt  d   f2              rename.txt  t1
+c  copy-text.txt   f1  helloWorld.txt  Script.txt  t2.txt
+
+
+
+
+
